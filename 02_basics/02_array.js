@@ -16,6 +16,8 @@ console.log(all);
 const newArr = [1,2,3,4,[5,6,7,[8,3,2,[9,10]]]];
 console.log(newArr.flat(Infinity));
 
+console.log(Array.from({name:"rahul"})); // pass empty array
+
 console.log(Array.isArray('tushar'));
 console.log(Array.from('tushar'));
 
