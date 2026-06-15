@@ -25,6 +25,22 @@ console.log(Object.keys(obj)); //for keys
 console.log(Object.values(obj)); // for values
 console.log(obj.hasOwnProperty('islogged')); // check the value of obj
 
+//object deconstructing
+
+const user = {
+    name:'sam',
+    age:19,
+    city:"Delhi",
+    class:12
+}
+
+console.log(user.city);
+
+const {city:CITY} = user
+
+console.log(CITY);
+
+
 
 
 
