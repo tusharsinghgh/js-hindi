@@ -1,10 +1,10 @@
 // FOR EACH
 
 let myArr = ['js','py','cpp','java'];
-// myArr.forEach((val)=>{
-//    console.log(val);
+myArr.forEach((val,index,arr)=>{
+   console.log(val,index,arr);
    
-// })
+})
 
 // function arr(items){
 // console.log(items);
