@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    padding: 15px;
+}
+
+.color{
+    height: 30px;
+    width: 80px;
+    border-radius:5px;
+    border: 2px solid black;
+}
+
+#red{
+    background-color:red;
+    cursor: pointer;
+}
+#blue{
+    background-color:blue;
+    cursor: pointer;
+}
+#violet{
+    background-color:violet;
+    cursor: pointer;
+}
+#green{
+    background-color:green;
+    cursor: pointer;
+}
