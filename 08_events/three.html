@@ -9,16 +9,27 @@
 
 <body>
     <button id="stop">stop</button>
+     <button id="start">start</button>
 </body>
 <script>
-    const changeTime = setInterval(() => {
+    let changeTime;
+
+      document.querySelector('#start').addEventListener('click',()=>{
+    if(!changeTime){
+        changeTime = setInterval(() => {
         const date = new Date().toLocaleTimeString();
         console.log(date);
     }, 1000)
+    }
+    })
+    
 
     document.querySelector('#stop').addEventListener('click',()=>{
-        clearInterval(changeTime)
+      clearInterval(changeTime)
+      changeTime = null;
     })
+
+  
 
 </script>
 
