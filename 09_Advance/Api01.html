@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+</head>
+<style>
+    #btn{
+      height: 40px;
+      width: 100px;
+      color:antiquewhite;
+      background-color: dodgerblue;
+      border-radius: 15px;
+      border:none;
+      margin-top: 20px;
+    }
+
+    .card{
+        width: 250px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        color:grey;
+        display:none;
+        text-align: center;
+    }
+
+    img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border-radius: 2px solid dodgerblue;
+    }
+
+</style>
+<body>
+    <div class="card"></div>
+    <button id="btn">click</button>
+</body>
+<script>
+
+    const button = document.querySelector('#btn')
+    const card = document.querySelector('.card')
+   
+
+      const requestUrl = "https://api.github.com/users/hiteshchoudhary"
+
+    button.addEventListener('click', () => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", requestUrl);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText);
+                console.log(data.followers);
+
+                card.innerHTML = `
+                <img src = ${data.avatar_url} alt="profile">
+                <p>${data.name}</p>
+
+                `
+                card.style.display = "block";
+            }
+        }
+        xhr.send();
+
+    })
+
+
+
+</script>
+
+</html>
