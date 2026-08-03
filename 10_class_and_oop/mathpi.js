@@ -25,7 +25,7 @@ Object.defineProperties(newObj,{
     enumerable:false
 }})
 
-// console.log(Object.getOwnPropertyDescriptor(newObj,'pass','username','email'))
+console.log(Object.getOwnPropertyDescriptor(newObj,'username'))
 
 for (const [key,value] of Object.entries(newObj)) {
   
